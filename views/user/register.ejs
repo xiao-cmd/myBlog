@@ -49,8 +49,8 @@
         $(function() {
             $('#form').on('submit', function(e) {
                 // 取消表单的默认提交事件
-                // e.preventDefault()
-                // 当取消了表单的默认提交行为之后，手动发起Ajax请求，提交表单
+                e.preventDefault()
+                    // 当取消了表单的默认提交行为之后，手动发起Ajax请求，提交表单
                 $.ajax({
                     url: '/register',
                     data: $('#form').serialize(),
